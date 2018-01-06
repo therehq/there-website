@@ -30,7 +30,7 @@
   },
   "scripts": {
     "dev": "next dev -p 9009",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start -p 9009",
     "format": "prettier --write ./**/*.js",
     "lint": "eslint . --ext .js --fix",
