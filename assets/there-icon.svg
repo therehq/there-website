@@ -1,0 +1,35 @@
+<svg width="70" height="70" viewBox="0 0 70 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>there-icon</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-287 287)">
+<g id="there-icon">
+<g id="Rectangle">
+<use xlink:href="#path0_fill" transform="translate(287 -287)" fill="url(#paint0_linear)"/>
+</g>
+<g id="Counters" filter="url(#filter0_d)">
+<use xlink:href="#path1_fill" transform="translate(300.162 -272.342)" fill="url(#paint1_linear)"/>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d" filterUnits="userSpaceOnUse" x="295" y="-276" width="54" height="52" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+<feOffset dx="0" dy="2"/>
+<feGaussianBlur stdDeviation="2.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.04 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1.20578e-14 70 -70 4.28626e-15 70 1.24345e-13)">
+<stop offset="0" stop-color="#78E7FF"/>
+<stop offset="1" stop-color="#4DD9F7"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(2.67434e-15 40.9826 -43.6753 2.50946e-15 43.6753 0)">
+<stop offset="0" stop-color="#FFFFFF"/>
+<stop offset="1" stop-color="#F0F3F5"/>
+</linearGradient>
+<path id="path0_fill" d="M 0 14.0598C 0 6.2948 6.2948 0 14.0598 0L 55.9402 0C 63.7052 0 70 6.2948 70 14.0598L 70 55.9402C 70 63.7052 63.7052 70 55.9402 70L 14.0598 70C 6.2948 70 0 63.7052 0 55.9402L 0 14.0598Z"/>
+<path id="path1_fill" fill-rule="evenodd" d="M 23.8687 0.00583825C 22.1613 -0.0982345 20.6922 1.20154 20.5874 2.90896L 19.6358 18.4129L 19.6338 18.4202C 19.191 20.0667 20.1675 21.7581 21.8149 22.1979L 39.7843 26.9959C 41.4316 27.4357 43.1259 26.4574 43.5687 24.8109C 44.0114 23.1644 43.0349 21.4731 41.3876 21.0332L 25.9346 16.9072L 26.7706 3.28581C 26.8754 1.5784 25.5762 0.109911 23.8687 0.00583825ZM 13.4353 10.5817C 12.0286 10.4214 10.7584 11.4323 10.5981 12.8396L 9.08917 26.0904C 9.06982 26.2604 9.06752 26.4284 9.08096 26.5927C 9.07311 27.566 9.62228 28.5011 10.5616 28.9393L 24.501 35.4427C 25.7841 36.0413 27.3092 35.4859 27.9076 34.2021C 28.5059 32.9184 27.9508 31.3924 26.6677 30.7938L 14.3671 25.055L 15.692 13.4203C 15.8523 12.013 14.8419 10.7421 13.4353 10.5817ZM 1.75475 21.226C 1.93784 20.1304 2.97437 19.391 4.06991 19.5746C 5.16541 19.7582 5.90509 20.7951 5.722 21.8907L 4.18304 31.0993L 13.0536 37.3187C 13.9639 37.9569 14.1853 39.2129 13.5483 40.124C 12.9112 41.035 11.6567 41.2562 10.7465 40.618L 0.863043 33.6885C 0.302036 33.2951 0.00267112 32.6672 0.00467954 32.0299C -0.0058738 31.8759 0.00124697 31.7182 0.0278312 31.5592L 1.75475 21.226Z"/>
+</defs>
+</svg>
