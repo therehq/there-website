@@ -1,7 +1,8 @@
 import Document, { Head, Main, NextScript } from 'next/document'
-import { ServerStyleSheet, injectGlobal } from 'styled-components'
+import { ServerStyleSheet, injectGlobal, css } from 'styled-components'
 
-import { BASE_FONT_SIZE } from '../utils/rem'
+import { phone } from '../utils/media'
+import { BASE_FONT_SIZE, BASE_MOBILE_FONT_SIZE } from '../utils/rem'
 
 injectGlobal`
   html,
@@ -14,6 +15,10 @@ injectGlobal`
     overflow-y: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    ${phone(css`
+      font-size: ${BASE_MOBILE_FONT_SIZE}px;
+    `)};
   }
 
   *, *:before, *:after {
@@ -39,6 +44,8 @@ export default class MyDocument extends Document {
 
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+          <title>There™ - Work across timezones efficiently</title>
 
           {/*
 

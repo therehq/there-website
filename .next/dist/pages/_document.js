@@ -42,15 +42,17 @@ var _document2 = _interopRequireDefault(_document);
 
 var _styledComponents = require('styled-components');
 
+var _media = require('../utils/media');
+
 var _rem = require('../utils/rem');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _jsxFileName = '/Users/mohammad/Documents/dev/there/there-website/pages/_document.js?entry';
 
-var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  html,\n  body {\n    margin: 0;\n    padding: 0;\n    font-family: "Work Sans", sans-serif;\n    font-size: ', 'px;\n    overflow-x: hidden;\n    overflow-y: auto;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n  }\n\n  *, *:before, *:after {\n    box-sizing: border-box;\n  }\n'], ['\n  html,\n  body {\n    margin: 0;\n    padding: 0;\n    font-family: "Work Sans", sans-serif;\n    font-size: ', 'px;\n    overflow-x: hidden;\n    overflow-y: auto;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n  }\n\n  *, *:before, *:after {\n    box-sizing: border-box;\n  }\n']);
+var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  html,\n  body {\n    margin: 0;\n    padding: 0;\n    font-family: "Work Sans", sans-serif;\n    font-size: ', 'px;\n    overflow-x: hidden;\n    overflow-y: auto;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n\n    ', ';\n  }\n\n  *, *:before, *:after {\n    box-sizing: border-box;\n  }\n'], ['\n  html,\n  body {\n    margin: 0;\n    padding: 0;\n    font-family: "Work Sans", sans-serif;\n    font-size: ', 'px;\n    overflow-x: hidden;\n    overflow-y: auto;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n\n    ', ';\n  }\n\n  *, *:before, *:after {\n    box-sizing: border-box;\n  }\n']);
 
-(0, _styledComponents.injectGlobal)(_templateObject, _rem.BASE_FONT_SIZE);
+(0, _styledComponents.injectGlobal)(_templateObject, _rem.BASE_FONT_SIZE, (0, _media.phone)((0, _styledComponents.css)(['font-size:', 'px;'], _rem.BASE_MOBILE_FONT_SIZE)));
 
 var MyDocument = function (_Document) {
   (0, _inherits3.default)(MyDocument, _Document);
@@ -66,46 +68,51 @@ var MyDocument = function (_Document) {
     value: function render() {
       return _react2.default.createElement('html', { lang: 'en', __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 41
         }
       }, _react2.default.createElement(_document.Head, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 42
         }
       }, _react2.default.createElement('meta', { charSet: 'UTF-8', __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 43
         }
       }), _react2.default.createElement('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1', __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 45
         }
       }), _react2.default.createElement('meta', { httpEquiv: 'X-UA-Compatible', content: 'IE=edge,chrome=1', __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 46
         }
-      }), _react2.default.createElement('link', {
+      }), _react2.default.createElement('title', {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 48
+        }
+      }, 'There\u2122 - Work across timezones efficiently'), _react2.default.createElement('link', {
         href: 'https://fonts.googleapis.com/css?family=Playfair+Display:700|Work+Sans:400,600',
         rel: 'stylesheet',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 75
         }
       }), this.props.styleTags), _react2.default.createElement('body', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75
+          lineNumber: 82
         }
       }, _react2.default.createElement(_document.Main, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76
+          lineNumber: 83
         }
       }), _react2.default.createElement(_document.NextScript, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 77
+          lineNumber: 84
         }
       })));
     }
@@ -120,7 +127,7 @@ var MyDocument = function (_Document) {
           return sheet.collectStyles(_react2.default.createElement(App, (0, _extends3.default)({}, props, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 28
+              lineNumber: 33
             }
           })));
         };
@@ -134,4 +141,4 @@ var MyDocument = function (_Document) {
 }(_document2.default);
 
 exports.default = MyDocument;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL19kb2N1bWVudC5qcyJdLCJuYW1lcyI6WyJEb2N1bWVudCIsIkhlYWQiLCJNYWluIiwiTmV4dFNjcmlwdCIsIlNlcnZlclN0eWxlU2hlZXQiLCJpbmplY3RHbG9iYWwiLCJCQVNFX0ZPTlRfU0laRSIsIk15RG9jdW1lbnQiLCJwcm9wcyIsInN0eWxlVGFncyIsInJlbmRlclBhZ2UiLCJzaGVldCIsInBhZ2UiLCJjb2xsZWN0U3R5bGVzIiwiZ2V0U3R5bGVFbGVtZW50Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU8sQUFBWSxBQUFNLEFBQU07Ozs7QUFDL0IsQUFBUyxBQUFrQjs7QUFFM0IsQUFBUyxBQUFzQjs7Ozs7Ozs7QUFFL0Isb0NBQUEsQUFNaUI7O0ksQUFZSTs7Ozs7Ozs7Ozs7NkJBVVYsQUFDUDs2QkFDRSxjQUFBLFVBQU0sTUFBTixBQUFXO29CQUFYO3NCQUFBLEFBQ0U7QUFERjtPQUFBLGtCQUNFLEFBQUM7O29CQUFEO3NCQUFBLEFBQ0U7QUFERjtBQUFBLGlEQUNRLFNBQU4sQUFBYztvQkFBZDtzQkFERixBQUNFLEFBRUE7QUFGQTtrREFFTSxNQUFOLEFBQVcsWUFBVyxTQUF0QixBQUE4QjtvQkFBOUI7c0JBSEYsQUFHRSxBQUNBO0FBREE7a0RBQ00sV0FBTixBQUFnQixtQkFBa0IsU0FBbEMsQUFBMEM7b0JBQTFDO3NCQUpGLEFBSUUsQUEyQkE7QUEzQkE7O2NBMkJBLEFBQ08sQUFDTDthQUZGLEFBRU07O29CQUZOO3NCQS9CRixBQStCRSxBQUtDO0FBTEQ7QUFDRSxlQUlELEFBQUssTUFyQ1YsQUFDRSxBQW9DYyxBQUVkLDRCQUFBLGNBQUE7O29CQUFBO3NCQUFBLEFBQ0U7QUFERjtBQUFBLHlCQUNFLEFBQUM7O29CQUFEO3NCQURGLEFBQ0UsQUFDQTtBQURBO0FBQUEsMEJBQ0EsQUFBQzs7b0JBQUQ7c0JBMUNOLEFBQ0UsQUF1Q0UsQUFFRSxBQUlQO0FBSk87QUFBQTs7OzswQ0FwRCtCO1VBQWQsQUFBYyxrQkFBZCxBQUFjLEFBQ3JDOztVQUFNLFFBQU4sQUFBYyxBQUFJLEFBQ2xCO1VBQU0sa0JBQWtCLGVBQUE7ZUFBTyxpQkFBQTt1QkFDN0IsQUFBTSw0Q0FBYyxBQUFDLGdDQUFELEFBQVM7O3dCQUFUOzBCQURTLEFBQzdCLEFBQW9CO0FBQUE7QUFBQSxZQUFBLENBQXBCO0FBRHNCO0FBQXhCLEFBQWEsQUFHYixPQUhhO1VBR1AsWUFBWSxNQUFsQixBQUFrQixBQUFNLEFBQ3hCO3dDQUFBLEFBQVksUUFBTSxXQUFsQixBQUNEOzs7OztBQVJxQyxBOztrQkFBbkIsQSIsImZpbGUiOiJfZG9jdW1lbnQuanM/ZW50cnkiLCJzb3VyY2VSb290IjoiL1VzZXJzL21vaGFtbWFkL0RvY3VtZW50cy9kZXYvdGhlcmUvdGhlcmUtd2Vic2l0ZSJ9
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL19kb2N1bWVudC5qcyJdLCJuYW1lcyI6WyJEb2N1bWVudCIsIkhlYWQiLCJNYWluIiwiTmV4dFNjcmlwdCIsIlNlcnZlclN0eWxlU2hlZXQiLCJpbmplY3RHbG9iYWwiLCJjc3MiLCJwaG9uZSIsIkJBU0VfRk9OVF9TSVpFIiwiQkFTRV9NT0JJTEVfRk9OVF9TSVpFIiwiTXlEb2N1bWVudCIsInByb3BzIiwic3R5bGVUYWdzIiwicmVuZGVyUGFnZSIsInNoZWV0IiwicGFnZSIsImNvbGxlY3RTdHlsZXMiLCJnZXRTdHlsZUVsZW1lbnQiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTyxBQUFZLEFBQU0sQUFBTTs7OztBQUMvQixBQUFTLEFBQWtCLEFBQWM7O0FBRXpDLEFBQVMsQUFBYTs7QUFDdEIsQUFBUyxBQUFnQixBQUE2Qjs7Ozs7Ozs7QUFFdEQsb0NBQUEsQUFNaUIsc0NBTVgsa0JBQUEsQUFBTSwwQ0FaWixBQVlNLEFBQ2E7O0ksQUFTRTs7Ozs7Ozs7Ozs7NkJBVVYsQUFDUDs2QkFDRSxjQUFBLFVBQU0sTUFBTixBQUFXO29CQUFYO3NCQUFBLEFBQ0U7QUFERjtPQUFBLGtCQUNFLEFBQUM7O29CQUFEO3NCQUFBLEFBQ0U7QUFERjtBQUFBLGlEQUNRLFNBQU4sQUFBYztvQkFBZDtzQkFERixBQUNFLEFBRUE7QUFGQTtrREFFTSxNQUFOLEFBQVcsWUFBVyxTQUF0QixBQUE4QjtvQkFBOUI7c0JBSEYsQUFHRSxBQUNBO0FBREE7a0RBQ00sV0FBTixBQUFnQixtQkFBa0IsU0FBbEMsQUFBMEM7b0JBQTFDO3NCQUpGLEFBSUUsQUFFQTtBQUZBOzBCQUVBLGNBQUE7O29CQUFBO3NCQUFBO0FBQUE7QUFBQSxTQU5GLEFBTUUsQUEyQkE7Y0FBQSxBQUNPLEFBQ0w7YUFGRixBQUVNOztvQkFGTjtzQkFqQ0YsQUFpQ0UsQUFLQztBQUxEO0FBQ0UsZUFJRCxBQUFLLE1BdkNWLEFBQ0UsQUFzQ2MsQUFFZCw0QkFBQSxjQUFBOztvQkFBQTtzQkFBQSxBQUNFO0FBREY7QUFBQSx5QkFDRSxBQUFDOztvQkFBRDtzQkFERixBQUNFLEFBQ0E7QUFEQTtBQUFBLDBCQUNBLEFBQUM7O29CQUFEO3NCQTVDTixBQUNFLEFBeUNFLEFBRUUsQUFJUDtBQUpPO0FBQUE7Ozs7MENBdEQrQjtVQUFkLEFBQWMsa0JBQWQsQUFBYyxBQUNyQzs7VUFBTSxRQUFOLEFBQWMsQUFBSSxBQUNsQjtVQUFNLGtCQUFrQixlQUFBO2VBQU8saUJBQUE7dUJBQzdCLEFBQU0sNENBQWMsQUFBQyxnQ0FBRCxBQUFTOzt3QkFBVDswQkFEUyxBQUM3QixBQUFvQjtBQUFBO0FBQUEsWUFBQSxDQUFwQjtBQURzQjtBQUF4QixBQUFhLEFBR2IsT0FIYTtVQUdQLFlBQVksTUFBbEIsQUFBa0IsQUFBTSxBQUN4Qjt3Q0FBQSxBQUFZLFFBQU0sV0FBbEIsQUFDRDs7Ozs7QUFScUMsQTs7a0JBQW5CLEEiLCJmaWxlIjoiX2RvY3VtZW50LmpzP2VudHJ5Iiwic291cmNlUm9vdCI6Ii9Vc2Vycy9tb2hhbW1hZC9Eb2N1bWVudHMvZGV2L3RoZXJlL3RoZXJlLXdlYnNpdGUifQ==

@@ -15,7 +15,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var WIDE_WIDTH = exports.WIDE_WIDTH = 1200;
 var NORMAL_WIDTH = exports.NORMAL_WIDTH = 900;
-var SIDE_PADDINGS = exports.SIDE_PADDINGS = 15;
+var SIDE_PADDINGS = exports.SIDE_PADDINGS = 25;
 
 var Container = _styledComponents2.default.div.withConfig({
   displayName: 'Container',

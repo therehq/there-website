@@ -12,6 +12,8 @@ var _styledComponents = require('styled-components');
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
+var _media = require('../utils/media');
+
 var _retinaImage = require('../utils/retinaImage');
 
 var _Svgs = require('./Svgs');
@@ -25,17 +27,17 @@ var AppScreenshot = function AppScreenshot() {
   return _react2.default.createElement(Wrapper, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 8
     }
   }, _react2.default.createElement(HandleWrapper, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 9
     }
   }, _react2.default.createElement(_Svgs.CornerHandle, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 10
     }
   })));
 };
@@ -46,10 +48,10 @@ exports.default = AppScreenshot;
 var Wrapper = _styledComponents2.default.div.withConfig({
   displayName: 'AppScreenshot__Wrapper',
   componentId: 's6co25q-0'
-})(['width:1022px;height:595px;position:relative;box-shadow:0px 6px 13px rgba(0,0,0,0.2);background-color:#e8e8e8;background-size:cover;background-position:top right;', ';img{opacity:0;display:block;}'], (0, _retinaImage.retinaImage)('/static/app-screenshot', 'jpg'));
+})(['width:1022px;height:595px;position:relative;box-shadow:0px 6px 13px rgba(0,0,0,0.2);background-color:#e8e8e8;background-size:cover;background-position:top right;', ';', ';'], (0, _retinaImage.retinaImage)('/static/app-screenshot', 'jpg'), (0, _media.phone)((0, _styledComponents.css)(['height:320px;width:100%;background-image:url(/static/app-screenshot-mobile@2x.jpg);background-position:top center;background-size:cover;box-shadow:0 0 0 15px #f0f0f0;'])));
 
 var HandleWrapper = _styledComponents2.default.div.withConfig({
   displayName: 'AppScreenshot__HandleWrapper',
   componentId: 's6co25q-1'
-})(['position:absolute;bottom:0;right:0;transform:translate(30px,35px);']);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvQXBwU2NyZWVuc2hvdC5qcyJdLCJuYW1lcyI6WyJzdHlsZWQiLCJyZXRpbmFJbWFnZSIsIkNvcm5lckhhbmRsZSIsIkFwcFNjcmVlbnNob3QiLCJXcmFwcGVyIiwiZGl2IiwiSGFuZGxlV3JhcHBlciJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBLEFBQU87Ozs7QUFFUCxBQUFTLEFBQW1COztBQUM1QixBQUFTLEFBQW9COzs7Ozs7O0FBRTdCLElBQU0sZ0JBQWdCLFNBQWhCLEFBQWdCLGdCQUFBO3lCQUNuQixjQUFEOztnQkFBQTtrQkFBQSxBQUNFO0FBREY7QUFBQSxHQUFBLGtCQUNHLGNBQUQ7O2dCQUFBO2tCQUFBLEFBQ0U7QUFERjtBQUFBLHFCQUNFLEFBQUM7O2dCQUFEO2tCQUhnQixBQUNwQixBQUNFLEFBQ0U7QUFBQTtBQUFBO0FBSE4sQUFRQTs7a0JBQUEsQUFBZTs7O0FBRWYsSUFBTSxxQ0FBQSxBQUFpQjtlQUFqQjtlQUFBO0FBQUEsQ0FBVSwyTUFXWiw4QkFBQSxBQUFZLDBCQVhoQixBQUFNLEFBV0YsQUFBc0M7O0FBUTFDLElBQU0sMkNBQUEsQUFBdUI7ZUFBdkI7ZUFBQTtBQUFBLENBQWdCLEdBQXRCIiwiZmlsZSI6IkFwcFNjcmVlbnNob3QuanMiLCJzb3VyY2VSb290IjoiL1VzZXJzL21vaGFtbWFkL0RvY3VtZW50cy9kZXYvdGhlcmUvdGhlcmUtd2Vic2l0ZSJ9
+})(['position:absolute;bottom:0;right:0;transform:translate(30px,35px);', ';'], (0, _media.phone)((0, _styledComponents.css)(['display:none;'])));
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvQXBwU2NyZWVuc2hvdC5qcyJdLCJuYW1lcyI6WyJzdHlsZWQiLCJjc3MiLCJwaG9uZSIsInJldGluYUltYWdlIiwiQ29ybmVySGFuZGxlIiwiQXBwU2NyZWVuc2hvdCIsIldyYXBwZXIiLCJkaXYiLCJIYW5kbGVXcmFwcGVyIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7O0FBQUEsQUFBTyxBQUFVOzs7O0FBRWpCLEFBQVMsQUFBYTs7QUFDdEIsQUFBUyxBQUFtQjs7QUFDNUIsQUFBUyxBQUFvQjs7Ozs7OztBQUU3QixJQUFNLGdCQUFnQixTQUFoQixBQUFnQixnQkFBQTt5QkFDbkIsY0FBRDs7Z0JBQUE7a0JBQUEsQUFDRTtBQURGO0FBQUEsR0FBQSxrQkFDRyxjQUFEOztnQkFBQTtrQkFBQSxBQUNFO0FBREY7QUFBQSxxQkFDRSxBQUFDOztnQkFBRDtrQkFIZ0IsQUFDcEIsQUFDRSxBQUNFO0FBQUE7QUFBQTtBQUhOLEFBUUE7O2tCQUFBLEFBQWU7OztBQUVmLElBQU0scUNBQUEsQUFBaUI7ZUFBakI7ZUFBQTtBQUFBLENBQVUsbUxBV1osOEJBQUEsQUFBWSwwQkFYVixBQVdGLEFBQXNDLFFBRXRDLGtCQUFBLEFBQU0sNEJBYlYsQUFBTTs7QUF1Qk4sSUFBTSwyQ0FBQSxBQUF1QjtlQUF2QjtlQUFBO0FBQUEsQ0FBZ0IsK0VBT2xCLGtCQUFBLEFBQU0sNEJBUFYsQUFBTSIsImZpbGUiOiJBcHBTY3JlZW5zaG90LmpzIiwic291cmNlUm9vdCI6Ii9Vc2Vycy9tb2hhbW1hZC9Eb2N1bWVudHMvZGV2L3RoZXJlL3RoZXJlLXdlYnNpdGUifQ==

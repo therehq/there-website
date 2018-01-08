@@ -1,5 +1,6 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
+import { phone } from '../utils/media'
 import { retinaImage } from '../utils/retinaImage'
 import { CornerHandle } from './Svgs'
 
@@ -26,10 +27,14 @@ const Wrapper = styled.div`
 
   ${retinaImage('/static/app-screenshot', 'jpg')};
 
-  img {
-    opacity: 0;
-    display: block;
-  }
+  ${phone(css`
+    height: 320px;
+    width: 100%;
+    background-image: url(/static/app-screenshot-mobile@2x.jpg);
+    background-position: top center;
+    background-size: cover;
+    box-shadow: 0 0 0 15px #f0f0f0; /* change Photo wrapper too */
+  `)};
 `
 
 const HandleWrapper = styled.div`
@@ -38,4 +43,8 @@ const HandleWrapper = styled.div`
   right: 0;
 
   transform: translate(30px, 35px);
+
+  ${phone(css`
+    display: none;
+  `)};
 `
