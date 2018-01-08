@@ -1,13 +1,15 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet, injectGlobal } from 'styled-components'
 
+import { BASE_FONT_SIZE } from '../utils/rem'
+
 injectGlobal`
   html,
   body {
     margin: 0;
     padding: 0;
     font-family: "Work Sans", sans-serif;
-    font-size: 18px;
+    font-size: ${BASE_FONT_SIZE}px;
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-font-smoothing: antialiased;
