@@ -24,6 +24,11 @@ injectGlobal`
   *, *:before, *:after {
     box-sizing: border-box;
   }
+
+  ::selection {
+    background: black;
+    color: white;
+  }
 `
 
 export default class MyDocument extends Document {
