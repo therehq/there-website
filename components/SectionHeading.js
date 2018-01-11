@@ -1,4 +1,6 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+
+import { phone } from '../utils/media'
 
 const Heading = styled.h2`
   margin: 0;
@@ -10,6 +12,10 @@ const Heading = styled.h2`
   letter-spacing: -0.5px;
 
   color: ${p => p.theme.colors.darkText};
+
+  ${phone(css`
+    font-size: 45px;
+  `)};
 `
 
 export default Heading

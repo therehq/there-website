@@ -88,7 +88,7 @@ const SlackWrapper = styled.div`
   width: 100%;
   grid-column: 1 / 4;
   padding: 30px 37px;
-  background: #f0f0f0;
+  background: #c9fcff; /* #f0f0f0; */
   text-align: center;
 
   ${phone(css`

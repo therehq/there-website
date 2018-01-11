@@ -1,11 +1,11 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
-import { phone } from '../utils/media'
 import Container from '../components/Container'
 import SectionHeading from '../components/SectionHeading'
+import SectionWrapper from '../components/SectionWrapper'
 
 const IsItReady = () => (
-  <Wrapper>
+  <SectionWrapper>
     <Container>
       <SectionHeading>Is it ready?</SectionHeading>
       <Text>
@@ -16,14 +16,10 @@ const IsItReady = () => (
         <p>If you like There™, you can subscribe to the mailing list now!</p>
       </Text>
     </Container>
-  </Wrapper>
+  </SectionWrapper>
 )
 
 export default IsItReady
-
-const Wrapper = styled.aside`
-  margin-top: 130px;
-`
 
 const Text = styled.div`
   p {

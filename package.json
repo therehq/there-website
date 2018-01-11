@@ -11,6 +11,7 @@
     "polished": "^1.9.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-responsive": "^4.0.3",
     "styled-components": "^2.4.0"
   },
   "devDependencies": {
