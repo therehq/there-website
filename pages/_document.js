@@ -52,6 +52,11 @@ export default class MyDocument extends Document {
 
           <title>There™ - Work across timezones efficiently</title>
 
+          <meta
+            name="google-site-verification"
+            content="EIzeuUTvAAhs5zEakaJPQw1ctmmrz4tscdyJRM7amhc"
+          />
+
           {/*
 
           <link rel="icon" type="image/png" href="/static/favicon.png" />
