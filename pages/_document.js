@@ -31,6 +31,10 @@ injectGlobal`
   }
 `
 
+const crispScript = `
+  window.$crisp=[];window.CRISP_WEBSITE_ID="bb14ccd2-0869-40e7-b0f1-b520e93db7e1";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+`
+
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet()
@@ -54,7 +58,7 @@ export default class MyDocument extends Document {
 
           <meta
             name="google-site-verification"
-            content="EIzeuUTvAAhs5zEakaJPQw1ctmmrz4tscdyJRM7amhc"
+            content="XKtisJxke0C2Hpeb8rgDk6yPDLRZj3PDR3-UtNZ04Ac"
           />
 
           {/*
@@ -85,6 +89,11 @@ export default class MyDocument extends Document {
           <link
             href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Work+Sans:400,600"
             rel="stylesheet"
+          />
+
+          <script
+            type="text/javascript"
+            dangerouslySetInnerHTML={{ __html: crispScript }}
           />
 
           {this.props.styleTags}
