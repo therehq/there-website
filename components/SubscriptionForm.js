@@ -45,6 +45,7 @@ class SubscriptionForm extends Component {
             <InlineInput
               showLabel={!!email}
               label="Email"
+              type="email"
               placeholder="sara@example.com"
               width={270}
               value={email}
