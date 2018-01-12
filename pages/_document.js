@@ -35,6 +35,10 @@ const crispScript = `
   window.$crisp=[];window.CRISP_WEBSITE_ID="bb14ccd2-0869-40e7-b0f1-b520e93db7e1";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
 `
 
+const mailChimpScript = `
+  !function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/6ea1cb2726621ef9a2563a17c/8f912a6c5c65deff04cb0d7e3.js");
+`
+
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet()
@@ -94,6 +98,11 @@ export default class MyDocument extends Document {
           <script
             type="text/javascript"
             dangerouslySetInnerHTML={{ __html: crispScript }}
+          />
+
+          <script
+            id="mcjs"
+            dangerouslySetInnerHTML={{ __html: mailChimpScript }}
           />
 
           {this.props.styleTags}
