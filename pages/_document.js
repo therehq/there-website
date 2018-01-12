@@ -94,11 +94,13 @@ export default class MyDocument extends Document {
           <meta name="description" content={website.description} />
 
           <meta property="og:type" content="article" />
+          <meta property="og:title" content={website.title} />
           <meta property="og:url" content={website.homepage} />
           <meta property="og:description" content={website.description} />
           <meta property="og:image:url" content={website.socialBannerUrl} />
 
           <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={website.title} />
           <meta name="twitter:site" content="@WhenIsThere" />
           <meta name="twitter:creator" content="@morajabi" />
           <meta name="twitter:description" content={website.description} />
