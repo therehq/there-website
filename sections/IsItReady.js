@@ -1,11 +1,13 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import Container from '../components/Container'
 import SectionHeading from '../components/SectionHeading'
 import SectionWrapper from '../components/SectionWrapper'
+import { phone } from '../utils/media'
 
 const IsItReady = () => (
   <SectionWrapper>
+    <Anchor id="isitready" />
     <Container>
       <SectionHeading>Is it ready?</SectionHeading>
       <Text>
@@ -30,4 +32,13 @@ const Text = styled.div`
       margin-top: 0;
     }
   }
+`
+
+const Anchor = styled.div`
+  position: relative;
+  top: -100px;
+
+  ${phone(css`
+    top: -60px;
+  `)};
 `

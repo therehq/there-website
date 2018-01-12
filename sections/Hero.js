@@ -124,7 +124,9 @@ const DownloadSection = styled.div`
   `)};
 `
 
-const DownloadButton = styled.button`
+const DownloadButton = styled.a.attrs({
+  href: '#isitready',
+})`
   flex: 0 0 auto;
   padding: 10px 17px;
 
@@ -132,13 +134,17 @@ const DownloadButton = styled.button`
   font-weight: 600;
   letter-spacing: 1.2px;
   text-transform: uppercase;
+  text-decoration: none;
 
   background: ${p => p.theme.colors.lightGreen};
   color: ${p => p.theme.colors.green};
   border: none;
 
+  transition: background 100ms, color 100ms;
+
   &:hover {
     background: ${p => darken(0.1, p.theme.colors.lightGreen)};
+    color: ${p => darken(0.1, p.theme.colors.green)};
   }
 `
 
