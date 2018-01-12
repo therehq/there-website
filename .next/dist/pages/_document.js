@@ -56,6 +56,8 @@ var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  html,\n  body {
 
 var crispScript = '\n  window.$crisp=[];window.CRISP_WEBSITE_ID="bb14ccd2-0869-40e7-b0f1-b520e93db7e1";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();\n';
 
+var mailChimpScript = '\n  !function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/6ea1cb2726621ef9a2563a17c/8f912a6c5c65deff04cb0d7e3.js");\n';
+
 var MyDocument = function (_Document) {
   (0, _inherits3.default)(MyDocument, _Document);
 
@@ -70,65 +72,72 @@ var MyDocument = function (_Document) {
     value: function render() {
       return _react2.default.createElement('html', { lang: 'en', __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 54
         }
       }, _react2.default.createElement(_document.Head, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 55
         }
       }, _react2.default.createElement('meta', { charSet: 'UTF-8', __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 56
         }
       }), _react2.default.createElement('meta', { name: 'viewport', content: 'width=device-width, initial-scale=1', __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 58
         }
       }), _react2.default.createElement('meta', { httpEquiv: 'X-UA-Compatible', content: 'IE=edge,chrome=1', __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 59
         }
       }), _react2.default.createElement('title', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 61
         }
       }, 'There\u2122 - Work across timezones efficiently'), _react2.default.createElement('meta', {
         name: 'google-site-verification',
-        content: 'EIzeuUTvAAhs5zEakaJPQw1ctmmrz4tscdyJRM7amhc',
+        content: 'XKtisJxke0C2Hpeb8rgDk6yPDLRZj3PDR3-UtNZ04Ac',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59
+          lineNumber: 63
         }
       }), _react2.default.createElement('link', {
         href: 'https://fonts.googleapis.com/css?family=Playfair+Display:700|Work+Sans:400,600',
         rel: 'stylesheet',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 93
         }
       }), _react2.default.createElement('script', {
         type: 'text/javascript',
         dangerouslySetInnerHTML: { __html: crispScript },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 98
+        }
+      }), _react2.default.createElement('script', {
+        id: 'mcjs',
+        dangerouslySetInnerHTML: { __html: mailChimpScript },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 103
         }
       }), this.props.styleTags), _react2.default.createElement('body', {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 110
         }
       }, _react2.default.createElement(_document.Main, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 111
         }
       }), _react2.default.createElement(_document.NextScript, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 112
         }
       })));
     }
@@ -143,7 +152,7 @@ var MyDocument = function (_Document) {
           return sheet.collectStyles(_react2.default.createElement(App, (0, _extends3.default)({}, props, {
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 42
+              lineNumber: 46
             }
           })));
         };
@@ -157,4 +166,4 @@ var MyDocument = function (_Document) {
 }(_document2.default);
 
 exports.default = MyDocument;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL19kb2N1bWVudC5qcyJdLCJuYW1lcyI6WyJEb2N1bWVudCIsIkhlYWQiLCJNYWluIiwiTmV4dFNjcmlwdCIsIlNlcnZlclN0eWxlU2hlZXQiLCJpbmplY3RHbG9iYWwiLCJjc3MiLCJwaG9uZSIsIkJBU0VfRk9OVF9TSVpFIiwiQkFTRV9NT0JJTEVfRk9OVF9TSVpFIiwiY3Jpc3BTY3JpcHQiLCJNeURvY3VtZW50IiwiX19odG1sIiwicHJvcHMiLCJzdHlsZVRhZ3MiLCJyZW5kZXJQYWdlIiwic2hlZXQiLCJwYWdlIiwiY29sbGVjdFN0eWxlcyIsImdldFN0eWxlRWxlbWVudCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPLEFBQVksQUFBTSxBQUFNOzs7O0FBQy9CLEFBQVMsQUFBa0IsQUFBYzs7QUFFekMsQUFBUyxBQUFhOztBQUN0QixBQUFTLEFBQWdCLEFBQTZCOzs7Ozs7OztBQUV0RCxvQ0FBQSxBQU1pQixzQ0FNWCxrQkFBQSxBQUFNLDBDQVpaLEFBWU0sQUFDYTs7QUFjbkIsSUFBTSxjQUFOOztJQUlxQixBOzs7Ozs7Ozs7Ozs2QkFVVixBQUNQOzZCQUNFLGNBQUEsVUFBTSxNQUFOLEFBQVc7b0JBQVg7c0JBQUEsQUFDRTtBQURGO09BQUEsa0JBQ0UsQUFBQzs7b0JBQUQ7c0JBQUEsQUFDRTtBQURGO0FBQUEsaURBQ1EsU0FBTixBQUFjO29CQUFkO3NCQURGLEFBQ0UsQUFFQTtBQUZBO2tEQUVNLE1BQU4sQUFBVyxZQUFXLFNBQXRCLEFBQThCO29CQUE5QjtzQkFIRixBQUdFLEFBQ0E7QUFEQTtrREFDTSxXQUFOLEFBQWdCLG1CQUFrQixTQUFsQyxBQUEwQztvQkFBMUM7c0JBSkYsQUFJRSxBQUVBO0FBRkE7MEJBRUEsY0FBQTs7b0JBQUE7c0JBQUE7QUFBQTtBQUFBLFNBTkYsQUFNRSxBQUVBO2NBQUEsQUFDTyxBQUNMO2lCQUZGLEFBRVU7O29CQUZWO3NCQVJGLEFBUUUsQUE4QkE7QUE5QkE7QUFDRTtjQTZCRixBQUNPLEFBQ0w7YUFGRixBQUVNOztvQkFGTjtzQkF0Q0YsQUFzQ0UsQUFLQTtBQUxBO0FBQ0U7Y0FJRixBQUNPLEFBQ0w7aUNBQXlCLEVBQUUsUUFGN0IsQUFFMkIsQUFBVTs7b0JBRnJDO3NCQTNDRixBQTJDRSxBQUtDO0FBTEQ7QUFDRSxlQUlELEFBQUssTUFqRFYsQUFDRSxBQWdEYyxBQUVkLDRCQUFBLGNBQUE7O29CQUFBO3NCQUFBLEFBQ0U7QUFERjtBQUFBLHlCQUNFLEFBQUM7O29CQUFEO3NCQURGLEFBQ0UsQUFDQTtBQURBO0FBQUEsMEJBQ0EsQUFBQzs7b0JBQUQ7c0JBdEROLEFBQ0UsQUFtREUsQUFFRSxBQUlQO0FBSk87QUFBQTs7OzswQ0FoRStCO1VBQWQsQUFBYyxrQkFBZCxBQUFjLEFBQ3JDOztVQUFNLFFBQU4sQUFBYyxBQUFJLEFBQ2xCO1VBQU0sa0JBQWtCLGVBQUE7ZUFBTyxpQkFBQTt1QkFDN0IsQUFBTSw0Q0FBYyxBQUFDLGdDQUFELEFBQVM7O3dCQUFUOzBCQURTLEFBQzdCLEFBQW9CO0FBQUE7QUFBQSxZQUFBLENBQXBCO0FBRHNCO0FBQXhCLEFBQWEsQUFHYixPQUhhO1VBR1AsWUFBWSxNQUFsQixBQUFrQixBQUFNLEFBQ3hCO3dDQUFBLEFBQVksUUFBTSxXQUFsQixBQUNEOzs7OztBQVJxQyxBOztrQkFBbkIsQSIsImZpbGUiOiJfZG9jdW1lbnQuanM/ZW50cnkiLCJzb3VyY2VSb290IjoiL1VzZXJzL21vaGFtbWFkL0RvY3VtZW50cy9kZXYvdGhlcmUvdGhlcmUtd2Vic2l0ZSJ9
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL19kb2N1bWVudC5qcyJdLCJuYW1lcyI6WyJEb2N1bWVudCIsIkhlYWQiLCJNYWluIiwiTmV4dFNjcmlwdCIsIlNlcnZlclN0eWxlU2hlZXQiLCJpbmplY3RHbG9iYWwiLCJjc3MiLCJwaG9uZSIsIkJBU0VfRk9OVF9TSVpFIiwiQkFTRV9NT0JJTEVfRk9OVF9TSVpFIiwiY3Jpc3BTY3JpcHQiLCJtYWlsQ2hpbXBTY3JpcHQiLCJNeURvY3VtZW50IiwiX19odG1sIiwicHJvcHMiLCJzdHlsZVRhZ3MiLCJyZW5kZXJQYWdlIiwic2hlZXQiLCJwYWdlIiwiY29sbGVjdFN0eWxlcyIsImdldFN0eWxlRWxlbWVudCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPLEFBQVksQUFBTSxBQUFNOzs7O0FBQy9CLEFBQVMsQUFBa0IsQUFBYzs7QUFFekMsQUFBUyxBQUFhOztBQUN0QixBQUFTLEFBQWdCLEFBQTZCOzs7Ozs7OztBQUV0RCxvQ0FBQSxBQU1pQixzQ0FNWCxrQkFBQSxBQUFNLDBDQVpaLEFBWU0sQUFDYTs7QUFjbkIsSUFBTSxjQUFOOztBQUlBLElBQU0sa0JBQU47O0ksQUFJcUI7Ozs7Ozs7Ozs7OzZCQVVWLEFBQ1A7NkJBQ0UsY0FBQSxVQUFNLE1BQU4sQUFBVztvQkFBWDtzQkFBQSxBQUNFO0FBREY7T0FBQSxrQkFDRSxBQUFDOztvQkFBRDtzQkFBQSxBQUNFO0FBREY7QUFBQSxpREFDUSxTQUFOLEFBQWM7b0JBQWQ7c0JBREYsQUFDRSxBQUVBO0FBRkE7a0RBRU0sTUFBTixBQUFXLFlBQVcsU0FBdEIsQUFBOEI7b0JBQTlCO3NCQUhGLEFBR0UsQUFDQTtBQURBO2tEQUNNLFdBQU4sQUFBZ0IsbUJBQWtCLFNBQWxDLEFBQTBDO29CQUExQztzQkFKRixBQUlFLEFBRUE7QUFGQTswQkFFQSxjQUFBOztvQkFBQTtzQkFBQTtBQUFBO0FBQUEsU0FORixBQU1FLEFBRUE7Y0FBQSxBQUNPLEFBQ0w7aUJBRkYsQUFFVTs7b0JBRlY7c0JBUkYsQUFRRSxBQThCQTtBQTlCQTtBQUNFO2NBNkJGLEFBQ08sQUFDTDthQUZGLEFBRU07O29CQUZOO3NCQXRDRixBQXNDRSxBQUtBO0FBTEE7QUFDRTtjQUlGLEFBQ08sQUFDTDtpQ0FBeUIsRUFBRSxRQUY3QixBQUUyQixBQUFVOztvQkFGckM7c0JBM0NGLEFBMkNFLEFBS0E7QUFMQTtBQUNFO1lBSUYsQUFDSyxBQUNIO2lDQUF5QixFQUFFLFFBRjdCLEFBRTJCLEFBQVU7O29CQUZyQztzQkFoREYsQUFnREUsQUFLQztBQUxEO0FBQ0UsZUFJRCxBQUFLLE1BdERWLEFBQ0UsQUFxRGMsQUFFZCw0QkFBQSxjQUFBOztvQkFBQTtzQkFBQSxBQUNFO0FBREY7QUFBQSx5QkFDRSxBQUFDOztvQkFBRDtzQkFERixBQUNFLEFBQ0E7QUFEQTtBQUFBLDBCQUNBLEFBQUM7O29CQUFEO3NCQTNETixBQUNFLEFBd0RFLEFBRUUsQUFJUDtBQUpPO0FBQUE7Ozs7MENBckUrQjtVQUFkLEFBQWMsa0JBQWQsQUFBYyxBQUNyQzs7VUFBTSxRQUFOLEFBQWMsQUFBSSxBQUNsQjtVQUFNLGtCQUFrQixlQUFBO2VBQU8saUJBQUE7dUJBQzdCLEFBQU0sNENBQWMsQUFBQyxnQ0FBRCxBQUFTOzt3QkFBVDswQkFEUyxBQUM3QixBQUFvQjtBQUFBO0FBQUEsWUFBQSxDQUFwQjtBQURzQjtBQUF4QixBQUFhLEFBR2IsT0FIYTtVQUdQLFlBQVksTUFBbEIsQUFBa0IsQUFBTSxBQUN4Qjt3Q0FBQSxBQUFZLFFBQU0sV0FBbEIsQUFDRDs7Ozs7QUFScUMsQTs7a0JBQW5CLEEiLCJmaWxlIjoiX2RvY3VtZW50LmpzP2VudHJ5Iiwic291cmNlUm9vdCI6Ii9Vc2Vycy9tb2hhbW1hZC9Eb2N1bWVudHMvZGV2L3RoZXJlL3RoZXJlLXdlYnNpdGUifQ==

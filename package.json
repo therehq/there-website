@@ -7,8 +7,10 @@
   "license": "MIT",
   "private": false,
   "dependencies": {
+    "axios": "^0.17.1",
     "next": "^4.2.1",
     "polished": "^1.9.0",
+    "qs": "^6.5.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-responsive": "^4.0.3",

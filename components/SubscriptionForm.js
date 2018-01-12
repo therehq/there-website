@@ -1,24 +1,36 @@
 import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
 import { darken } from 'polished'
+import axios from 'axios'
+import { stringify } from 'qs'
 
 import { SIDE_PADDINGS } from '../components/Container'
 import InlineInput from '../components/InlineInput'
 import { phone } from '../utils/media'
 
+const responseTypes = {
+  DONE: 'done',
+  ALREADY_SUBSCRIBED: 'already_subscribed',
+  INVALID_EMAIL: 'invalid_email',
+  EMPTY: 'empty',
+  NETWORK_ERROR: 'network_error',
+}
+
 class SubscriptionForm extends Component {
   state = {
     name: '',
     email: '',
+    loading: false,
+    responseType: null,
   }
 
   render() {
-    const { name, email } = this.state
+    const { name, email, loading, responseType } = this.state
     const everythingReady = name && email.includes('@')
 
     return (
       <Wrapper>
-        <FormWrapper>
+        <FormWrapper onSubmit={this.subscribe}>
           <Text>
             <TextPiece>Yes! I’m </TextPiece>
             <InlineInput
@@ -41,11 +53,88 @@ class SubscriptionForm extends Component {
             <SmallArrow> ⟶</SmallArrow>
           </Text>
           <Button disabled={!everythingReady} grabAttention={everythingReady}>
-            Subscribe to list!
+            {this.getButtonText(loading, responseType)}
           </Button>
         </FormWrapper>
+        {responseType !== null && (
+          <Message>{this.getMessage(responseType)}</Message>
+        )}
       </Wrapper>
     )
+  }
+
+  getMessage = responseType => {
+    switch (responseType) {
+      case responseTypes.DONE:
+        return `You just subscribed! 🎉`
+
+      case responseTypes.EMPTY:
+        return `Oh, it seems you missed a field!`
+
+      case responseTypes.ALREADY_SUBSCRIBED:
+        return `You've already subscribed! 😉`
+
+      case responseTypes.INVALID_EMAIL:
+        return `Can you double check your email?`
+
+      case responseTypes.NETWORK_ERROR:
+        return `Oh, there's a network problem 🤔`
+
+      default:
+        return ''
+    }
+  }
+
+  getButtonText = (loading, responseType) => {
+    if (loading) {
+      return `loading...`
+    } else if (responseType === responseTypes.DONE) {
+      return `✓`
+    } else {
+      return `Subscribe to list!`
+    }
+  }
+
+  callApi = ({ name, email }) =>
+    axios({
+      method: 'post',
+      url: 'https://phpapi.there.pm/subscribe.php',
+      data: stringify({
+        name,
+        email,
+      }),
+    })
+
+  subscribe = e => {
+    e.preventDefault()
+
+    const { name, email } = this.state
+
+    // Check if any field is unfilled
+    if (name.trim() === '' || email.trim() === '') {
+      this.setState({ responseType: responseTypes.EMPTY })
+      return false
+    }
+
+    // Let's start...
+    this.setState({ loading: true, responseType: null })
+
+    this.callApi({ name, email }).then(({ statusText, data }) => {
+      if (
+        statusText !== 'OK' ||
+        data === undefined ||
+        data.status === undefined
+      ) {
+        this.setState({
+          loading: false,
+          responseType: responseTypes.NETWORK_ERROR,
+        })
+      }
+
+      this.setState({ loading: false, responseType: data.type })
+    })
+
+    return false
   }
 }
 
@@ -137,5 +226,15 @@ const SmallArrow = styled.small`
 const TextPiece = styled.span`
   ${phone(css`
     display: none;
+  `)};
+`
+
+const Message = styled.p`
+  margin: 25px 0 0 0;
+  text-align: right;
+  color: #999;
+
+  ${phone(css`
+    text-align: center;
   `)};
 `
