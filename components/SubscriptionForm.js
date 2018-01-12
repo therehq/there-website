@@ -52,7 +52,10 @@ class SubscriptionForm extends Component {
             />{' '}
             <SmallArrow> ⟶</SmallArrow>
           </Text>
-          <Button disabled={!everythingReady} grabAttention={everythingReady}>
+          <Button
+            disabled={!everythingReady || responseType === responseTypes.DONE}
+            grabAttention={everythingReady}
+          >
             {this.getButtonText(loading, responseType)}
           </Button>
         </FormWrapper>
