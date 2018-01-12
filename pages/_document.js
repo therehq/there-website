@@ -44,6 +44,14 @@ const heapScript = `
   heap.load("2869438827");
 `
 
+const website = {
+  title: 'There™ - Work across timezones efficiently & remotely',
+  homepage: 'https://there.pm',
+  description: `Friends or co-workers' time across multiple timezones, for communicating with remote workers and open sourcers`,
+  socialBannerUrl: 'https://there.pm/static/There-pm-banner-1024-512.png',
+  color: '#3ACFFC',
+}
+
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet()
@@ -63,37 +71,40 @@ export default class MyDocument extends Document {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-          <title>There™ - Work across timezones efficiently</title>
+          <title>{website.title}</title>
 
           <meta
             name="google-site-verification"
             content="XKtisJxke0C2Hpeb8rgDk6yPDLRZj3PDR3-UtNZ04Ac"
           />
 
-          {/*
-
           <link rel="icon" type="image/png" href="/static/favicon.png" />
-          <link rel="apple-touch-icon" type="image/png" href="/static/icons/graphql-eu-icon-180x180.png" />
+          <link
+            rel="apple-touch-icon"
+            type="image/png"
+            href="/static/icons/there-icon-pwa-180.png"
+          />
           <link rel="manifest" href="/static/manifest.json" />
-          <meta name="theme-color" content="#DB3F74" />
+          <meta name="theme-color" content={website.color} />
 
-          <meta name="keywords" content="GraphQL,conference,Europe,Berlin,2018" />
-          <meta name="description" content="GraphQL-Europe - Berlin, June 15th, 2018 - Join Europe’s biggest GraphQL-dedicated conference" />
+          <meta
+            name="keywords"
+            content="Timezone,remote,work,time,app,GMT,PST,rajabi"
+          />
+          <meta name="description" content={website.description} />
 
-          <meta property="og:type" content="article"/>
-          <meta property="og:url" content="https://graphql-europe.org/"/>
-          <meta property="og:description" content="GraphQL-Europe - Berlin, June 15th, 2018 - Join Europe’s biggest GraphQL-dedicated conference"/>
-          <meta property="og:image:url" content="https://graphql-europe.org/static/GrapQL-Europe-2018-banner.jpg"/>
+          <meta property="og:type" content="article" />
+          <meta property="og:url" content={website.homepage} />
+          <meta property="og:description" content={website.description} />
+          <meta property="og:image:url" content={website.socialBannerUrl} />
 
-          <meta name="twitter:card" content="summary_large_image"/>
-          <meta name="twitter:site" content="@graphqleu"/>
-          <meta name="twitter:creator" content="@graphqleu"/>
-          <meta name="twitter:description" content="GraphQL-Europe - Berlin, June 15th, 2018 - Join Europe’s biggest GraphQL-dedicated conference"/>
-          <meta name="twitter:image" content="https://graphql-europe.org/static/GrapQL-Europe-2018-banner.jpg"/>
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@WhenIsThere" />
+          <meta name="twitter:creator" content="@morajabi" />
+          <meta name="twitter:description" content={website.description} />
+          <meta name="twitter:image" content={website.socialBannerUrl} />
 
-          <link rel="canonical" href="https://graphql-europe.org" />
-
-          */}
+          <link rel="canonical" href={website.homepage} />
 
           <link
             href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Work+Sans:400,600"
