@@ -1,3 +1,4 @@
+import react, { Component } from 'react'
 import styled, { css } from 'styled-components'
 
 import { phone } from '../utils/media'
@@ -5,23 +6,27 @@ import Container from '../components/Container'
 import SectionHeading from '../components/SectionHeading'
 import SectionWrapper from '../components/SectionWrapper'
 import SubscriptionForm from '../components/SubscriptionForm'
+import ShareDialog from '../components/ShareDialog'
 import { Arrow } from '../components/Svgs'
 
-const Subscribe = () => (
-  <SectionWrapper>
-    <Container>
-      <SectionHeading style={{ position: 'relative' }}>
-        Get it early 🙌{' '}
-        <ArrowWrapper>
-          <Arrow />
-        </ArrowWrapper>
-      </SectionHeading>
-    </Container>
-    <Container wide={true}>
-      <SubscriptionForm />
-    </Container>
-  </SectionWrapper>
-)
+class Subscribe extends Component {
+  render = () => (
+    <SectionWrapper>
+      <Container>
+        <SectionHeading style={{ position: 'relative' }}>
+          Get it early 🙌{' '}
+          <ArrowWrapper>
+            <Arrow />
+          </ArrowWrapper>
+        </SectionHeading>
+      </Container>
+      <Container wide={true}>
+        <SubscriptionForm />
+      </Container>
+      <ShareDialog />
+    </SectionWrapper>
+  )
+}
 
 export default Subscribe
 
