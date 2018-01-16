@@ -8,7 +8,7 @@ class ShareDialog extends Component {
     return (
       <Wrapper>
         <DialogContainer>
-          <CloseBtn>
+          <CloseBtn onClick={this.props.onClickDialogHandler}>
             <Close />
           </CloseBtn>
 
