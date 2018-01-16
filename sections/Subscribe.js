@@ -10,22 +10,37 @@ import ShareDialog from '../components/ShareDialog'
 import { Arrow } from '../components/Svgs'
 
 class Subscribe extends Component {
-  render = () => (
-    <SectionWrapper>
-      <Container>
-        <SectionHeading style={{ position: 'relative' }}>
-          Get it early 🙌{' '}
-          <ArrowWrapper>
-            <Arrow />
-          </ArrowWrapper>
-        </SectionHeading>
-      </Container>
-      <Container wide={true}>
-        <SubscriptionForm />
-      </Container>
-      <ShareDialog />
-    </SectionWrapper>
-  )
+  constructor(props) {
+    super(props)
+    this.state = { showDialog: false }
+  }
+  dialogHandler() {
+    const stateDialog = this.state.showDialog
+    const newStateDialog = stateDialog ? false : true
+
+    console.log(newStateDialog)
+    this.setState({ showDialog: newStateDialog })
+  }
+  render() {
+    return (
+      <SectionWrapper>
+        <Container>
+          <SectionHeading style={{ position: 'relative' }}>
+            Get it early 🙌{' '}
+            <ArrowWrapper>
+              <Arrow />
+            </ArrowWrapper>
+          </SectionHeading>
+        </Container>
+        <Container wide={true}>
+          <SubscriptionForm onClickDialogHandler={() => this.dialogHandler()} />
+        </Container>
+        {this.state.showDialog && (
+          <ShareDialog onClickDialogHandler={() => this.dialogHandler()} />
+        )}
+      </SectionWrapper>
+    )
+  }
 }
 
 export default Subscribe
