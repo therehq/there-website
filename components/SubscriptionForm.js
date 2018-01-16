@@ -17,6 +17,9 @@ const responseTypes = {
 }
 
 class SubscriptionForm extends Component {
+  constructor(props) {
+    super(props)
+  }
   state = {
     name: '',
     email: '',
@@ -27,7 +30,6 @@ class SubscriptionForm extends Component {
   render() {
     const { name, email, loading, responseType } = this.state
     const everythingReady = name && email.includes('@')
-
     return (
       <Wrapper>
         <FormWrapper onSubmit={this.subscribe}>
@@ -54,6 +56,7 @@ class SubscriptionForm extends Component {
             <SmallArrow> ⟶</SmallArrow>
           </Text>
           <Button
+            onClick={this.props.onClickDialogHandler}
             disabled={responseType === responseTypes.DONE}
             grabAttention={everythingReady}
           >
