@@ -7,16 +7,19 @@ import Features from '../sections/Features'
 import IsItReady from '../sections/IsItReady'
 import Subscribe from '../sections/Subscribe'
 import Footer from '../sections/Footer'
+import ErrorHandler from '../components/ErrorHandler'
 
 export default () => (
   <ThemeProvider theme={theme}>
-    <div>
-      <Hero />
-      <Quote />
-      <Features />
-      <IsItReady />
-      <Subscribe />
-      <Footer />
-    </div>
+    <ErrorHandler>
+      <div>
+        <Hero />
+        <Quote />
+        <Features />
+        <IsItReady />
+        <Subscribe />
+        <Footer />
+      </div>
+    </ErrorHandler>
   </ThemeProvider>
 )
