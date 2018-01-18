@@ -14,7 +14,7 @@ class ShareDialog extends Component {
 
   render() {
     return (
-      <Wrapper>
+      <Wrapper aria-modal="true" aria-describedby="share-dialog-desc">
         <DialogContainer>
           <CloseBtn onClick={this.props.onClose}>
             <Close />
@@ -22,7 +22,9 @@ class ShareDialog extends Component {
 
           <DialogText>
             <Title>Awesome! </Title>
-            <SubTitle>If you like it more, you can do these:</SubTitle>
+            <SubTitle id="share-dialog-desc">
+              If you like it more, you can do these:
+            </SubTitle>
             <ShareButtonContainer>
               <TwitterContainer>
                 <TwitterTitle>Tweet this</TwitterTitle>
