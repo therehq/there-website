@@ -20,6 +20,7 @@ class SubscriptionForm extends Component {
   constructor(props) {
     super(props)
   }
+
   state = {
     name: '',
     email: '',
@@ -56,7 +57,6 @@ class SubscriptionForm extends Component {
             <SmallArrow> ⟶</SmallArrow>
           </Text>
           <Button
-            onClick={this.props.onClickDialogHandler}
             disabled={responseType === responseTypes.DONE}
             grabAttention={everythingReady}
           >
@@ -136,6 +136,14 @@ class SubscriptionForm extends Component {
           loading: false,
           responseType: responseTypes.NETWORK_ERROR,
         })
+      }
+
+      // If successful, call show dialog
+      if (
+        data.type === responseTypes.DONE ||
+        data.type === responseTypes.ALREADY_SUBSCRIBED
+      ) {
+        this.props.openDialog()
       }
 
       this.setState({ loading: false, responseType: data.type })

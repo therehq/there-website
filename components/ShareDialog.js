@@ -1,14 +1,21 @@
 import React, { Component } from 'react'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
+import { Share as TwitterShare } from 'react-twitter-widgets'
 
 import { Close, SlackLogo } from '../components/Svgs'
 
 class ShareDialog extends Component {
+  componentDidMount() {
+    if (typeof twttr !== 'undefined') {
+      twttr.widgets.load()
+    }
+  }
+
   render() {
     return (
       <Wrapper>
         <DialogContainer>
-          <CloseBtn onClick={this.props.onClickDialogHandler}>
+          <CloseBtn onClick={this.props.onClose}>
             <Close />
           </CloseBtn>
 
@@ -19,22 +26,14 @@ class ShareDialog extends Component {
               <TwitterContainer>
                 <TwitterTitle>Tweet this</TwitterTitle>
                 <TwitterBtn>
-                  <a
-                    href="https://twitter.com/share?ref_src=twsrc%5Etfw"
-                    class="twitter-share-button"
-                    data-size="large"
-                    data-text="Hey, recently I find new amazing app called &quot;There&quot;, I suggest checking on them with this URL"
-                    data-url="https://there.pm"
-                    data-via="checktherepm"
-                    data-related="morajabi"
-                    data-show-count="false"
-                  >
-                    Tweet
-                  </a>
-                  <script
-                    async
-                    src="https://platform.twitter.com/widgets.js"
-                    charset="utf-8"
+                  <TwitterShare
+                    url="https://there.pm"
+                    options={{
+                      size: 'large',
+                      via: 'WhenIsThere',
+                      text:
+                        'Remote workers, travellers, open sourcers 👇\n\n ⏰ There™ - For people with different time zones!',
+                    }}
                   />
                 </TwitterBtn>
               </TwitterContainer>

@@ -12,15 +12,23 @@ import { Arrow } from '../components/Svgs'
 class Subscribe extends Component {
   constructor(props) {
     super(props)
-    this.state = { showDialog: false }
+    this.state = { isDialogOpen: false }
   }
-  dialogHandler() {
-    const stateDialog = this.state.showDialog
-    const newStateDialog = stateDialog ? false : true
 
-    console.log(newStateDialog)
-    this.setState({ showDialog: newStateDialog })
+  openDialog = () => {
+    this.setState({ isDialogOpen: true })
   }
+
+  openDialogWithDelay = () => {
+    if (process.browser && window) {
+      setTimeout(this.openDialog, 1100)
+    }
+  }
+
+  closeDialog = () => {
+    this.setState({ isDialogOpen: false })
+  }
+
   render() {
     return (
       <SectionWrapper>
@@ -33,11 +41,9 @@ class Subscribe extends Component {
           </SectionHeading>
         </Container>
         <Container wide={true}>
-          <SubscriptionForm onClickDialogHandler={() => this.dialogHandler()} />
+          <SubscriptionForm openDialog={this.openDialogWithDelay} />
         </Container>
-        {this.state.showDialog && (
-          <ShareDialog onClickDialogHandler={() => this.dialogHandler()} />
-        )}
+        {this.state.isDialogOpen && <ShareDialog onClose={this.closeDialog} />}
       </SectionWrapper>
     )
   }
