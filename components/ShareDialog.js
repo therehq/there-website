@@ -85,7 +85,7 @@ const DialogContainer = styled.div`
   position: relative;
 
   text-align: center;
-  padding: 60px 0;
+  padding: 70px 0 80px 0;
 
   background: #fff;
   box-shadow: 0px 0px 2px;
@@ -114,7 +114,6 @@ const CloseBtn = styled.div`
 
 const DialogText = styled.div`
   width: 100%;
-  height: 250px;
   text-align: center;
 `
 
