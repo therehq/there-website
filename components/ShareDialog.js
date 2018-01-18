@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Share as TwitterShare } from 'react-twitter-widgets'
 
+import { mobile } from '../utils/media'
 import { Close, SlackLogo } from '../components/Svgs'
 
 class ShareDialog extends Component {
@@ -66,33 +67,53 @@ const Wrapper = styled.div`
   bottom: 0;
   background: rgba(0, 0, 0, 0.39);
   z-index: 100;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ${mobile(css`
+    padding: 5px;
+  `)};
 `
 
 const DialogContainer = styled.div`
-  width: 900px;
-  height: 400px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -450px;
-  margin-top: -200px;
-  display: flex;
-  justify-content: center;
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+
+  text-align: center;
+  padding: 60px 0;
+
   background: #fff;
   box-shadow: 0px 0px 2px;
+
+  ${mobile(css`
+    height: 100%;
+  `)};
 `
 
 const CloseBtn = styled.div`
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  transition: background 50ms ease-out;
+  cursor: pointer;
+
+  svg {
+    display: block;
+  }
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.08);
+  }
 `
 
 const DialogText = styled.div`
-  width: 520px;
+  width: 100%;
   height: 250px;
   text-align: center;
-  margin-top: 62px;
 `
 
 const Title = styled.h1`
@@ -100,66 +121,89 @@ const Title = styled.h1`
   font-family: Playfair Display;
   font-weight: bold;
   font-size: 45px;
-  letter-spacing: -0.03em;
   color: #616161;
+
+  ${mobile(css`
+    font-size: 40px;
+  `)};
 `
 
 const SubTitle = styled.p`
   margin: 6px 0 0 0;
-  font-family: 'Work Sans', sans-serif;
-  font-size: 25px;
-  letter-spacing: -0.03em;
   color: #9e9e9e;
+
+  ${mobile(css`
+    font-size: 20px;
+    padding: 10px;
+  `)};
 `
 
 const ShareButtonContainer = styled.div`
   width: 100%;
-  height: 100px;
-  margin: 61px 0 0 0;
+  margin-top: 60px;
   display: flex;
   justify-content: center;
+
+  ${mobile(css`
+    flex-direction: column;
+  `)};
 `
 
 const TwitterContainer = styled.div`
-  width: 45%;
+  flex: 1 1 50%;
   text-align: right;
+
+  ${mobile(css`
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  `)};
 `
 
 const Plus = styled.div`
-  content: '+';
-  width: 10%;
-  font-family: Work Sans;
   font-size: 35px;
-  letter-spacing: -0.03em;
   color: #cfcfcf;
+  padding: 0 30px;
+
+  ${mobile(css`
+    padding-top: 20px;
+    padding-bottom: 20px;
+  `)};
 `
 
 const SlackContainer = styled.div`
-  width: 45%;
+  flex: 1 1 50%;
   text-align: left;
+
+  ${mobile(css`
+    text-align: center;
+  `)};
 `
 
 const TwitterTitle = styled.div`
   font-family: 'Work Sans', sans-serif;
   font-size: 35px;
-  letter-spacing: -0.03em;
   color: #0ba3d4;
 `
 
 const SlackTitle = styled.a`
   font-family: 'Work Sans', sans-serif;
   font-size: 35px;
-  letter-spacing: -0.03em;
   color: #87644a;
   text-decoration: none;
 `
 
 const TwitterBtn = styled.div`
-  float: right;
   margin-top: 12px;
 `
 
 const SlackButton = styled.a`
-  width: 200px;
   margin-left: -10px;
+  margin-top: 1px;
+  display: block;
+
+  svg {
+    display: inline-block;
+  }
 `
