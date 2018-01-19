@@ -7,6 +7,7 @@ import SectionHeading from '../components/SectionHeading'
 import SectionWrapper from '../components/SectionWrapper'
 import SubscriptionForm from '../components/SubscriptionForm'
 import ShareDialog from '../components/ShareDialog'
+import NoSpam from '../components/NoSpam'
 import { Arrow } from '../components/Svgs'
 
 class Subscribe extends Component {
@@ -44,6 +45,7 @@ class Subscribe extends Component {
           <SubscriptionForm openDialog={this.openDialogWithDelay} />
         </Container>
         {this.state.isDialogOpen && <ShareDialog onClose={this.closeDialog} />}
+        <NoSpam />
       </SectionWrapper>
     )
   }
