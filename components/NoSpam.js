@@ -1,27 +1,19 @@
-import React, { Component } from 'react'
-import styled, { css } from 'styled-components'
+import React from 'react'
+import styled from 'styled-components'
 
 const NoSpam = () => (
-  <Wrapper>
-    <NoSpamText>
-      No spam, ever. I’ll personally email you once <br />
-      the app is out! Expect to hear from me at later January 18.
-    </NoSpamText>
-  </Wrapper>
+  <NoSpamText>
+    #noSpamWePromise I’ll personally email you once <br />
+    the app is out! Expect to hear from me at later January 18.
+  </NoSpamText>
 )
 
 export default NoSpam
 
-const Wrapper = styled.footer`
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-`
-
 const NoSpamText = styled.p`
-  max-width 730px;
-  line-height: 32px;
+  max-width: 730px;
+  margin-top: 45px;
+  line-height: 1.4;
   font-size: 25px;
   color: #bfbfbf;
 `
