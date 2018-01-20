@@ -44,8 +44,11 @@ class Subscribe extends Component {
         <Container wide={true}>
           <SubscriptionForm openDialog={this.openDialogWithDelay} />
         </Container>
+        <Container>
+          <NoSpam />
+        </Container>
+
         {this.state.isDialogOpen && <ShareDialog onClose={this.closeDialog} />}
-        <NoSpam />
       </SectionWrapper>
     )
   }
