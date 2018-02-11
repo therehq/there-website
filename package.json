@@ -8,6 +8,7 @@
   "private": false,
   "dependencies": {
     "axios": "^0.17.1",
+    "firebase": "^4.9.1",
     "next": "^4.2.1",
     "polished": "^1.9.0",
     "qs": "^6.5.1",
