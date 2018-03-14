@@ -27,7 +27,9 @@ const Texts = () => (
     </LogoTypeWrapper>
     <Description>Your friends & teammates' time? Ah, There!</Description>
     <DownloadSection>
-      <DownloadButton>Download</DownloadButton>
+      <DownloadButton href="https://api.there.pm/download/macos">
+        Download
+      </DownloadButton>
       <DownloadNotes>Available for macOS, other platforms soon!</DownloadNotes>
     </DownloadSection>
   </TextsWrapper>
@@ -124,9 +126,7 @@ const DownloadSection = styled.div`
   `)};
 `
 
-const DownloadButton = styled.a.attrs({
-  href: '#isitready',
-})`
+const DownloadButton = styled.a`
   flex: 0 0 auto;
   padding: 10px 17px;
 
