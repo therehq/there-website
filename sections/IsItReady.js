@@ -12,8 +12,9 @@ const IsItReady = () => (
       <SectionHeading>Is it ready?</SectionHeading>
       <Text>
         <p>
-          I’m working hard to ship the macOS app at later January, after that
-          I’ll start working on other desktop platforms and a mobile app. 💪
+          Yes! Download the early versions now and let me know what you think!
+          I'm working on perfecting the desktop app now. I’m going to start
+          working on other desktop platforms and a mobile app. 💪
         </p>
         <p>If you like There™, you can subscribe to the mailing list now!</p>
       </Text>
