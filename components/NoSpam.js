@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 const NoSpam = () => (
   <NoSpamText>
-    #noSpamWePromise I’ll personally email you once <br />
-    the app is out! Expect to hear from me at mid Feb 18.
+    #noSpamWePromise I’ll personally email you <br />
+    for the big release!
   </NoSpamText>
 )
 
