@@ -18,7 +18,8 @@
     "react-dom": "^16.2.0",
     "react-responsive": "^4.0.3",
     "react-twitter-widgets": "^1.7.1",
-    "styled-components": "^2.4.0"
+    "styled-components": "^2.4.0",
+    "urql": "^0.2.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.1.2",
