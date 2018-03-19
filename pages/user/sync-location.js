@@ -8,6 +8,12 @@ console.log(process.env.NODE_ENV)
 
 export default class SyncLocation extends Component {
   urqlClient = null
+  retriedLocation = false
+
+  state = {
+    latitude: null,
+    longitude: null,
+  }
 
   static getInitialProps({ query: { token } }) {
     return { token }
@@ -26,33 +32,42 @@ export default class SyncLocation extends Component {
   }
 
   render() {
+    const { latitude, longitude } = this.props
     return (
       <Provider client={this.urqlClient}>
         <Connect query={query(`query { title }`)}>
-          {({ loaded, data }) => loaded && data.title}
+          {({ loaded, data }) => loaded && data.title} || {latitude}
+          {longitude}
         </Connect>
       </Provider>
     )
   }
 
   componentDidMount() {
-    if (typeof navigator !== 'undefined' && 'geolocation' in navigator) {
-      /* geolocation is available */
-      console.log(
-        navigator.geolocation.getCurrentPosition(
-          res => {
-            console.log(res)
-          },
-          err => {
-            console.log(err)
-          },
-          {
-            enableHighAccuracy: true,
-          },
-        ),
-      )
-    } else {
-      /* geolocation IS NOT available */
+    this.getLocation()
+  }
+
+  getLocation = async () => {
+    try {
+      const { cords: { latitude, longitude } } = await getCurrentPosition()
+      this.setState({ latitude, longitude })
+    } catch (err) {
+      if (!this.retriedLocation) {
+        this.retriedLocation = true
+        this.getLocation()
+      }
     }
   }
 }
+
+const getCurrentPosition = () =>
+  new Promise((resolve, reject) => {
+    if (typeof window === 'undefined' || !('geolocation' in navigator)) {
+      reject('Not available')
+    }
+    navigator.geolocation.getCurrentPosition(resolve, reject, {
+      enableHighAccuracy: true,
+      maximumAge: 30000,
+      timeout: 27000,
+    })
+  })
