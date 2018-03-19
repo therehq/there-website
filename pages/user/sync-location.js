@@ -50,7 +50,7 @@ export default class SyncLocation extends Component {
   getLocation = async () => {
     console.log('trying..')
     try {
-      const position = await getCurrentPosition()
+      const { coords: { latitude, longitude } } = await getCurrentPosition()
       console.log(position)
       this.setState({ latitude, longitude })
     } catch (err) {
