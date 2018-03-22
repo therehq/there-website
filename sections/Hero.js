@@ -27,7 +27,7 @@ const Texts = () => (
     </LogoTypeWrapper>
     <Description>Your friends & teammates' time? Ah, There!</Description>
     <DownloadSection>
-      <DownloadButton href="https://api.there.pm/download/macos">
+      <DownloadButton href="https://github.com/therepm/there-desktop/releases/download/v1.3.1/there-desktop-1.3.1-mac.zip">
         Download
       </DownloadButton>
       <DownloadNotes>Available for macOS, other platforms soon!</DownloadNotes>
