@@ -12,11 +12,14 @@ const IsItReady = () => (
       <SectionHeading>Is it ready?</SectionHeading>
       <Text>
         <p>
-          Yes! Download the early versions now and let me know what you think!
-          I'm working on perfecting the desktop app now. I’m going to start
-          working on other desktop platforms and a mobile app. 💪
+          👍 Yes! But it's just the start, there's a lot more coming! Download
+          the latest version now and let me know what you think!
         </p>
-        <p>If you like There™, you can subscribe to the mailing list now!</p>
+        <p>
+          📱 I’m going to start working on other desktop platforms and a mobile
+          app.
+        </p>
+        <p>💌 If you like There, you can subscribe to the mailing list now!</p>
       </Text>
     </Container>
   </SectionWrapper>
@@ -26,7 +29,7 @@ export default IsItReady
 
 const Text = styled.div`
   p {
-    margin: 13px 0 0 0;
+    margin: 15px 0 0 0;
     color: ${p => p.theme.colors.greyText};
 
     &:first-child {

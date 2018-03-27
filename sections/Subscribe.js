@@ -1,4 +1,4 @@
-import react, { Component } from 'react'
+import { Component } from 'react'
 import styled, { css } from 'styled-components'
 
 import { phone } from '../utils/media'
@@ -35,7 +35,7 @@ class Subscribe extends Component {
       <SectionWrapper>
         <Container>
           <SectionHeading style={{ position: 'relative' }}>
-            Get it early 🙌{' '}
+            Mailing List 💌{' '}
             <ArrowWrapper>
               <Arrow />
             </ArrowWrapper>
