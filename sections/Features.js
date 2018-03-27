@@ -18,7 +18,7 @@ const Features = () => (
         />
         <FeatureItem
           title="Synced Location!"
-          desc="Even if one moves, you see the updated time"
+          desc="Even if one moves, you see their updated time"
           renderIcon={() => <Rect />}
           iconTop={-10}
           iconLeft={-9}
