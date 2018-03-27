@@ -6,6 +6,7 @@ const FeatureItem = props => {
   const {
     iconTop = 0,
     iconLeft = 0,
+    comingSoon = false,
     renderIcon = () => <div />,
     title,
     desc,
@@ -16,7 +17,9 @@ const FeatureItem = props => {
         <Icon top={iconTop} left={iconLeft}>
           {renderIcon()}
         </Icon>
-        <TitleText>{title}</TitleText>
+        <TitleText>
+          {title} {comingSoon && <Supper>Soon!</Supper>}
+        </TitleText>
       </Title>
       <Description>{desc}</Description>
     </Wrapper>
@@ -64,4 +67,11 @@ const Description = styled.p`
   line-height: 1.3;
   letter-spacing: -0.8px;
   color: ${p => p.theme.colors.greyText};
+`
+
+const Supper = styled.sup`
+  opacity: 0.5;
+  font-size: 0.5em;
+  font-weight: normal;
+  font-family: 'Work Sans', sans-serif;
 `

@@ -17,8 +17,8 @@ const Features = () => (
           iconLeft={-14}
         />
         <FeatureItem
-          title="Pin for quick access"
-          desc="Frequently interacting w/ a few ones? Pin ‘em!"
+          title="Synced Location!"
+          desc="Even if one moves, you see the updated time"
           renderIcon={() => <Rect />}
           iconTop={-10}
           iconLeft={-9}
@@ -45,6 +45,7 @@ const SlackBox = () => (
     </SlackIconWrapper>
     <SlackFeatureItemWrapper>
       <FeatureItem
+        comingSoon={true}
         title="Slack team support"
         desc="Import your whole team from Slack with 1-click"
       />
