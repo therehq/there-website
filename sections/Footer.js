@@ -4,8 +4,14 @@ import { phone } from '../utils/media'
 
 const Footer = () => (
   <Wrapper>
-    Made with <span>❤️</span> by <a href="https://twitter.com/morajabi">Mo</a>{' '}
-    and other team members @ There™
+    <p>
+      Made with <span>❤️</span> by <a href="https://twitter.com/morajabi">Mo</a>{' '}
+      and other team members @ There™
+    </p>
+    <p>
+      <LinkItem href="/privacy">Privacy Policy</LinkItem>{' '}
+      <LinkItem href="/terms">Terms</LinkItem>
+    </p>
   </Wrapper>
 )
 
@@ -27,4 +33,15 @@ const Wrapper = styled.footer`
   ${phone(css`
     margin-top: 80px;
   `)};
+`
+
+const LinkItem = styled.a`
+  display: inline-block;
+  margin-right: 15px;
+  color: #555;
+  font-size: 14px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 `
