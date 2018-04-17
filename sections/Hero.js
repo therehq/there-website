@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 import { darken } from 'polished'
 
+import config from '../utils/config'
 import { mobile, phone } from '../utils/media'
 import { WIDE_WIDTH, SIDE_PADDINGS } from '../components/Container'
 import AppScreenshot from '../components/AppScreenshot'
@@ -27,11 +28,15 @@ const Texts = () => (
     </LogoTypeWrapper>
     <Description>Your friends & teammates' time? Ah, There!</Description>
     <DownloadSection>
-      <DownloadButton href="https://github.com/therepm/there-desktop/releases/download/v1.4.5/there-desktop-1.4.5-mac.zip">
+      {/* <DownloadButton href="https://github.com/therepm/there-desktop/releases/download/v1.4.5/there-desktop-1.4.5-mac.zip"> */}
+      <DownloadButton href="https://api.there.pm/download/macos">
         Download
       </DownloadButton>
       <DownloadNotes>Available for macOS, other platforms soon!</DownloadNotes>
     </DownloadSection>
+    <WhatsNew href={config.whatsNewPageUrl}>
+      What's coming? What's New?
+    </WhatsNew>
   </TextsWrapper>
 )
 
@@ -124,6 +129,14 @@ const DownloadSection = styled.div`
   ${phone(css`
     margin-top: 50px;
   `)};
+`
+
+const WhatsNew = styled.a`
+  display: block;
+  margin-top: 20px;
+  font-size: 14px;
+  color: ${p => p.theme.colors.green};
+  text-decoration: none;
 `
 
 const DownloadButton = styled.a`

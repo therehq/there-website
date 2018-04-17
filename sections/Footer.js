@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 
+import config from '../utils/config'
 import { phone } from '../utils/media'
 
 const Footer = () => (
@@ -9,6 +10,7 @@ const Footer = () => (
       and other team members @ There™
     </p>
     <p>
+      <LinkItem href={config.whatsNewPageUrl}>🌟 What's New?</LinkItem>{' '}
       <LinkItem href="/privacy">Privacy Policy</LinkItem>{' '}
       <LinkItem href="/terms">Terms</LinkItem>
     </p>
