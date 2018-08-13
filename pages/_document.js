@@ -70,6 +70,10 @@ export default class MyDocument extends Document {
 
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+          <meta
+            name="google-site-verification"
+            content="xW2oWVUs189OsMqWU4okvkuvkgO7jI7svZsEFdeUhtw"
+          />
 
           <title>{website.title}</title>
 
