@@ -1,5 +1,5 @@
 const isDev = process.env.NODE_ENV === 'development'
-const apiUrl = isDev ? `http://localhost:9900` : `https://api.there.pm`
+const apiUrl = isDev ? `http://localhost:9900` : `https://apiv1.there.team`
 
 export default {
   apiUrl,

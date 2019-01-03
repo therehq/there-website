@@ -30,12 +30,12 @@ class ShareDialog extends Component {
                 <TwitterTitle>Tweet this</TwitterTitle>
                 <TwitterBtn>
                   <TwitterShare
-                    url="https://there.pm"
+                    url="https://there.team"
                     options={{
                       size: 'large',
-                      via: 'WhenIsThere',
+                      via: 'ThereHQ',
                       text:
-                        'Remote workers, travellers, open sourcers 👇\n\n ⏰ There™ - For people with different time zones!',
+                        'Remote workers and travellers 👇\n\n ⏰ There™ - For people with different time zones!',
                     }}
                   />
                 </TwitterBtn>

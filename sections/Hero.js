@@ -29,7 +29,7 @@ const Texts = () => (
     <Description>Your friends & teammates' time? Ah, There!</Description>
     <DownloadSection>
       {/* <DownloadButton href="https://github.com/therepm/there-desktop/releases/download/v1.5.3/there-desktop-1.5.3-mac.zip"> */}
-      <DownloadButton href="https://api.there.pm/download/macos">
+      <DownloadButton href="https://apiv1.there.team/download/macos">
         Download
       </DownloadButton>
       <DownloadNotes>Available for macOS, other platforms soon!</DownloadNotes>
