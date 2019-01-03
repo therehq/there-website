@@ -106,7 +106,7 @@ class SubscriptionForm extends Component {
     axios({
       method: 'post',
       // TODO: update url
-      url: 'https://phpapi.there.pm/subscribe.php',
+      url: 'https://subdl.com/thereapi/subscribe.php',
       data: stringify({
         name,
         email,
