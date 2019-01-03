@@ -22,7 +22,7 @@ export default Hero
 
 const Texts = () => (
   <TextsWrapper>
-    <IconImage src="/static/there-icon.svg" alt="There™ app" />
+    <IconImage src="/static/there-icon.svg" alt="There app" width={70} height={70} />
     <LogoTypeWrapper>
       <LogoType />
     </LogoTypeWrapper>

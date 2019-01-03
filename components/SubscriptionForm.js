@@ -105,6 +105,7 @@ class SubscriptionForm extends Component {
   callApi = ({ name, email }) =>
     axios({
       method: 'post',
+      // TODO: update url
       url: 'https://phpapi.there.pm/subscribe.php',
       data: stringify({
         name,
