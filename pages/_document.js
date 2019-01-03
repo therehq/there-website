@@ -46,9 +46,9 @@ const heapScript = `
 
 const website = {
   title: 'There™ - Work across timezones efficiently & remotely',
-  homepage: 'https://there.pm',
+  homepage: 'https://there.team',
   description: `Friends or co-workers' time across multiple timezones, for communicating with remote workers and open sourcers`,
-  socialBannerUrl: 'https://there.pm/static/There-pm-banner-1024-512.png',
+  socialBannerUrl: 'https://there.netlify.com/static/There-pm-banner-1024-512.png',
   color: '#3ACFFC',
 }
 
@@ -82,7 +82,7 @@ export default class MyDocument extends Document {
             content="XKtisJxke0C2Hpeb8rgDk6yPDLRZj3PDR3-UtNZ04Ac"
           />
 
-          <link rel="icon" type="image/png" href="/static/favicon.png" />
+          <link rel="icon" type="image/png" href="/static/favicons/favicon.png" />
           <link
             rel="apple-touch-icon"
             type="image/png"
@@ -105,7 +105,7 @@ export default class MyDocument extends Document {
 
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content={website.title} />
-          <meta name="twitter:site" content="@WhenIsThere" />
+          <meta name="twitter:site" content="@ThereHQ" />
           <meta name="twitter:creator" content="@morajabi" />
           <meta name="twitter:description" content={website.description} />
           <meta name="twitter:image" content={website.socialBannerUrl} />
