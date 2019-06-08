@@ -8,5 +8,6 @@ export default {
     darkGreen: '#2FB568',
     red: '#FF5E85',
     lightBlue: '#2D9CDB',
+    brandBlue: 'rgb(28, 132, 255)',
   },
 }
